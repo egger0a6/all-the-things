@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
+import Home from './pages/Home/Home'
 import RobsThings from './pages/RobsThings/RobsThings'
 
 const App = () => {
@@ -125,18 +126,28 @@ const App = () => {
   const [huntersThings, setHuntersThings] = useState([
     {
       name: "energy drinks",
-      image: "https://imgs.xkcd.com/comics/functional.png",  
+      image: "https://imgs.xkcd.com/comics/functional.png",
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
-  
+
   const [robsThings, setRobsThings] = useState([
     {
       name: "hardshell tacos",
-      image: "https://imgs.xkcd.com/comics/fish.png",  
+      image: "https://imgs.xkcd.com/comics/fish.png",
       attributes: ["crunchy", "healthyish", "has protein", "yum"],
     },
   ])
+
+  const [jamieThings, setJamieThings] = useState([
+    {
+      name: "Jamie",
+      image: "https://imgs.xkcd.com/comics/functional.png",
+      attributes: ["efficient", "reusability", "not a taco", "beautiful"],
+    },
+  ])
+
+
 
   return (
     <Routes>
@@ -162,7 +173,12 @@ const App = () => {
         path="/robs-things"
         element={<RobsThings things={robsThings} />}
       />
+      <Route
+        path="/the-jamie-things"
+        element={<Home things={jamieThings} />}
+      />
     </Routes>
+
   )
 }
 
